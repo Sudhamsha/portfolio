@@ -10,7 +10,7 @@ deploy:
   secret_access_key: $AWS_SECRET_KEY
   local_dir: dpl_cd_upload
   skip_cleanup: true
-  on: &1
+  on: &2
     branch: master
   bucket: my-portfolio-sud
   region: eu-west-1
@@ -23,8 +23,8 @@ deploy:
   application: myPortfolio
   deployment_group: myPortfolio
   region: eu-west-1
-  on: *1
+  on: *2
 script:
-  - zip -r latest *
+  - zip -r latest * >/dev/null
   - mkdir -p dpl_cd_upload
   - mv latest.zip dpl_cd_upload/latest.zip
