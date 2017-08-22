@@ -11,7 +11,7 @@ deploy:
   local_dir: dpl_cd_upload
   skip_cleanup: true
   on: &2
-    repo: sudhamsha/portfolio
+    branch: master
   bucket: my-portfolio-sud
   region: eu-west-1
 - provider: codedeploy
