@@ -22,3 +22,14 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+/*Custom Styles*/
+
+.home-card {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.home-content {
+  padding-top: 0 !important;
+}
