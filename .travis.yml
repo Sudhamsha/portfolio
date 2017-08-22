@@ -17,14 +17,15 @@ deploy:
 - provider: codedeploy
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
-  bucket: eu-west-1
+  bucket: my-portfolio-sud
   key: latest.zip
   bundle_type: zip
   application: myPortfolio
   deployment_group: myPortfolio
   region: eu-west-1
   on: *2
-script:
+
+before_deploy:
   - zip -r latest * >/dev/null
   - mkdir -p dpl_cd_upload
   - mv latest.zip dpl_cd_upload/latest.zip
